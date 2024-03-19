@@ -4,7 +4,6 @@ services:
     image: selenium/hub:4.16
 #    ports:
 #      - 4444:4444
-
   chrome:
     image: selenium/node-chrome:4.16
     shm_size: '2g'  #browsers are heavy objects and required more memory tu run, ig memory not assigned it will crash
@@ -12,7 +11,6 @@ services:
       - hub
     deploy:
       replicas: 1
-    environment:
     env_file: .env
 
   firefox:
